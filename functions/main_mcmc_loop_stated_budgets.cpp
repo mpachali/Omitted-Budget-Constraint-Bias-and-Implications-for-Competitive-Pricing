@@ -9,9 +9,7 @@ using namespace Rcpp;
 
 // [[Rcpp::export]]
 vec startobeta(vec const& betastar){
-  
-  // by Max Pachali & Thomas Otter (2016-06-11)
-  
+    
   // converts normally distributed betastars to constrained betas
   
   int nvar = betastar.size();
@@ -31,13 +29,7 @@ vec startobeta(vec const& betastar){
 
 // [[Rcpp::export]]
 double llmnl_BC(vec const& betastar,double const& stated_budget,double error_sd, vec const& y, mat const& X, int const& pr){
-  
-  // Wayne Taylor 9/7/2014
-  
-  // Modified by Max Pachali & Thomas Otter (2016)
-  
-  // Evaluates log-likelihood for the multinomial logit model with sign & order constraints
-  
+    
   int pr_cpp = pr - 1; //c++ indexing of location of price coefficient
   int n = y.size(); //number of choice tasks
   int nvar = betastar.size(); //number of variables in beta
