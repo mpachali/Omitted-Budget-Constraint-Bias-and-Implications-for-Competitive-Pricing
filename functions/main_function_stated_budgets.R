@@ -1,5 +1,8 @@
 rhierMnlRwMixture_SR <- function (Data, stated_budget, Prior, Mcmc, nvar_c, pr, starting_budget) 
 {
+
+  pandterm=function(message) { stop(message,call.=FALSE) }
+  
   fsh=function() 
   {
     # 
